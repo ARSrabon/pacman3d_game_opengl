@@ -1,15 +1,35 @@
-﻿Build started 29-Aug-17 12:57:29 PM.
-     1>Project "E:\My Projects\games\games\games.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11-Sep-17 1:35:02 AM.
+     1>Project "F:\My Projects\games\games\games.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-     1>e:\my projects\games\games\source.cpp(528): warning C4101: 'dist_2' : unreferenced local variable
-     1>e:\my projects\games\games\source.cpp(527): warning C4101: 'dist_1' : unreferenced local variable
+     1>f:\my projects\games\games\source.cpp(392): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(393): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(398): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(399): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(402): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(412): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(413): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(418): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(419): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(422): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(432): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(433): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(438): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(439): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(442): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(452): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(453): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(458): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(459): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(462): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(501): warning C4101: 'dist_2' : unreferenced local variable
+     1>f:\my projects\games\games\source.cpp(500): warning C4101: 'dist_1' : unreferenced local variable
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\My Projects\games\Debug\games.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\My Projects\games\Debug\games.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\My Projects\games\Debug\games.lib" /MACHINE:X86 Debug\Source.obj
-         games.vcxproj -> E:\My Projects\games\Debug\games.exe
-     1>Done Building Project "E:\My Projects\games\games\games.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\My Projects\games\Debug\games.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\My Projects\games\Debug\games.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\My Projects\games\Debug\games.lib" /MACHINE:X86 Debug\Source.obj
+         games.vcxproj -> F:\My Projects\games\Debug\games.exe
+     1>Done Building Project "F:\My Projects\games\games\games.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.69
+Time Elapsed 00:00:01.11
