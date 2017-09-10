@@ -369,10 +369,11 @@ void pacman() {
     }
 }
 
-int x_coord(){
+int x_coord() {
     return 100 + px;
 }
-int y_coord(){
+
+int y_coord() {
     return abs(-100 + py);
 }
 
@@ -654,50 +655,60 @@ void generateEdibles() {
 
 void init_gamemap_level_one() {
     for (int i = 0; i < mat_range; i++) {
-        game_map[0][i] = 'w';
-        game_map[4][i] = 'w';
-        game_map[195][i] = 'w';
-        game_map[199][i] = 'w';
+        for (int j = 0; j <= 4; j++) {
+            game_map[j][i] = 'w';
+        }
+        for (int j = 195; j <= 199; j++) {
+            game_map[j][i] = 'w';
+        }
         // cube_J
         if (i <= 84 && i >= 14) {
-            game_map[14][i] = 'w';
-            game_map[24][i] = 'w';
+            for (int j = 14; j <= 24; j++) {
+                game_map[j][i] = 'w';
+            }
         }
         //cube_I
         if (i <= 174 && i >= 104) {
-            game_map[14][i] = 'w';
-            game_map[24][i] = 'w';
+            for (int j = 14; j <= 24; j++) {
+                game_map[j][i] = 'w';
+            }
         }
         // cube_L
         if (i <= 84 && i >= 34) {
-            game_map[39][i] = 'w';
-            game_map[49][i] = 'w';
+            for (int j = 39; j <= 49; j++) {
+                game_map[j][i] = 'w';
+            }
         }
         //cube_K
         if (i <= 174 && i >= 134) {
-            game_map[39][i] = 'w';
-            game_map[49][i] = 'w';
+            for (int j = 39; j <= 49; j++) {
+                game_map[j][i] = 'w';
+            }
         }
         // cube_N
         if (i <= 64 && i >= 14) {
-            game_map[54][i] = 'w';
-            game_map[64][i] = 'w';
+            for (int j = 54; j <= 64; j++) {
+                game_map[j][i] = 'w';
+            }
         }
         //cube_M
         if (i <= 164 && i >= 114) {
-            game_map[54][i] = 'w';
-            game_map[64][i] = 'w';
+            for (int j = 54; j <= 64; j++) {
+                game_map[j][i] = 'w';
+            }
         }
 
         // cube_P
         if (i <= 84 && i >= 14) {
-            game_map[175][i] = 'w';
-            game_map[185][i] = 'w';
+            for (int j = 175; j <= 185; j++) {
+                game_map[j][i] = 'w';
+            }
         }
         //cube_O
         if (i <= 174 && i >= 104) {
-            game_map[175][i] = 'w';
-            game_map[185][i] = 'w';
+            for (int j = 175; j <= 185; j++) {
+                game_map[j][i] = 'w';
+            }
         }
 
 
