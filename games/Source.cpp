@@ -383,8 +383,8 @@ bool pacmanMove() {
 
     printf("%f\t%f\n", px, py);
     printf("%d\t%d\n", temp_x, temp_y);
-    printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
-    printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
+    //printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
+    //printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
     printf("%d\n", side);
     switch (side) {
         case 0:
@@ -428,7 +428,7 @@ bool pacmanMove() {
             }
             break;
         case 2:
-            if (!(game_map[temp_y][temp_x - 5] == 'w')) {
+            if (!(game_map[temp_y][temp_x + 5] == 'w')) {
                 px++;
                 game_map[temp_y][temp_x] == 'O';
                 game_map[temp_y][x_coord()] == 'p';
@@ -448,7 +448,7 @@ bool pacmanMove() {
             }
             break;
         case 3:
-            if (!(game_map[temp_y][temp_x + 5] == 'w')) {
+            if (!(game_map[temp_y][temp_x - 5] == 'w')) {
                 px--;
                 game_map[temp_y][temp_x] == 'O';
                 game_map[temp_y][x_coord()] == 'p';
@@ -498,8 +498,108 @@ void ghosts(int x, int y, int color) {
 }
 
 void ghostMove_1() {
-    float dist_1;
-    float dist_2;
+	//need to update x & y coord methods.
+	int temp_x = x_coord();
+    int temp_y = y_coord();
+
+    /*printf("%f\t%f\n", px, py);
+    printf("%d\t%d\n", temp_x, temp_y);
+    printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
+    printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
+    printf("%d\n", side);*/
+    switch (side) {
+        case 0:
+            if (!(game_map[temp_y - 5][temp_x] == 'w')) {
+                py++;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[y_coord()][temp_x] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'f')) {
+                points++;
+                printf("%d", points);
+                py++;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[y_coord()][temp_x] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
+                       (game_map[temp_y][temp_x] == 'c')) {
+                game_map[temp_y][temp_x] == 'X';
+                halt_game = true;
+            } else {
+                side = 4;
+                pacmanMove();
+            }
+            break;
+        case 1:
+            if (!(game_map[temp_y + 5][temp_x] == 'w')) {
+                py--;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[y_coord()][temp_x] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'f')) {
+                points++;
+                printf("%d", points);
+                py--;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[y_coord()][temp_x] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
+                       (game_map[temp_y][temp_x] == 'c')) {
+                game_map[temp_y][temp_x] == 'X';
+                halt_game = true;
+            } else {
+                side = 4;
+                pacmanMove();
+            }
+            break;
+        case 2:
+            if (!(game_map[temp_y][temp_x + 5] == 'w')) {
+                px++;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[temp_y][x_coord()] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'f')) {
+                points++;
+                printf("%d", points);
+                px++;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[temp_y][x_coord()] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
+                       (game_map[temp_y][temp_x] == 'c')) {
+                game_map[temp_y][temp_x] == 'X';
+                halt_game = true;
+            } else {
+                side = 4;
+                pacmanMove();
+            }
+            break;
+        case 3:
+            if (!(game_map[temp_y][temp_x - 5] == 'w')) {
+                px--;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[temp_y][x_coord()] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'f')) {
+                points++;
+                printf("%d", points);
+                px--;
+                game_map[temp_y][temp_x] == 'O';
+                game_map[temp_y][x_coord()] == 'p';
+            } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
+                       (game_map[temp_y][temp_x] == 'c')) {
+                game_map[temp_y][temp_x] == 'X';
+                halt_game = true;
+            } else {
+                side = 4;
+                pacmanMove();
+            }
+            break;
+
+        default:
+            break;
+    }
+}
+
+void ghostMove_2() {
+
+}
+
+void ghostMove_3() {
+
 }
 
 
@@ -512,155 +612,62 @@ void edibles(int x, int y) {
     glPushMatrix();
     glColor3f(0, 1, 0);
     glTranslatef(x, y, 3);
-    glScalef(.025, .025, .025);
+    glScalef(.02, .02, .02);
     glutSolidSphere(100, 100, 100);
     glPopMatrix();
 }
 
 bool eat(float x, float y) {
-    if (px == x) {
-        if (y < (py + 5) && y > (py + 5)) {
-            return true;
-        }
-    } else {
-        return false;
-    }
+
     return false;
 }
 
 void generateEdibles() {
-    float temp = 90;
-    //right_most_side ZA
-    for (int i = 0; i < 25; i++) {
-        temp = 90 - i * 7.5;
-        r_m_s[i] = eat(90, temp);
-        if (!r_m_s[i]) {
-            edibles(90, temp);
+    for (int i = 0; i < 200; ++i) {
+        for (int j = 0; j < 200; ++j) {
+            if (game_map[i][j] == 'f') {
+                edibles(100 - j, -100 + i);
+            }
         }
-    }
 
-    //inner_right AA
-    for (int i = 0; i < 17; i++) {
-        temp = 50 - i * 7.5;
-        edibles(70, temp);
-    }
-
-    //inner_right_bar AB
-    for (int i = 1; i < 7; ++i) {
-        temp = 70 - i * 7.5;
-        edibles(temp, 50);
-    }
-
-    //inner_right_wall form AC
-    for (int i = 0; i < 3; i++) {
-        temp = 70 - i * 8;
-        edibles(17.5, temp);
-    }
-
-    //inner_right_bar AD
-    for (int i = 0; i < 7; ++i) {
-        temp = 70 - i * 7.5;
-        edibles(temp, 70);
-    }
-
-    //inner_right_bar AE
-    for (int i = 0; i < 10; ++i) {
-        temp = 90 - i * 7.5;
-        edibles(temp, 90);
-    }
-
-    //inner_right_bar ZB
-    for (int i = 1; i < 24; ++i) {
-        temp = 90 - i * 7.5;
-        edibles(temp, -90);
-    }
-
-    //right_most_side ZC
-    for (int i = 0; i < 25; i++) {
-        temp = 90 - i * 7.5;
-        r_m_s[i] = eat(90, temp);
-        edibles(-90, temp);
-    }
-
-    //inner_right BA
-    for (float i = 0; i < 14; i++) {
-        temp = 27.5 - i * 7.5;
-        edibles(-70, temp);
-    }
-
-    //inner_right_bar BB
-    for (int i = 1; i < 7; ++i) {
-        temp = -70 + i * 7.5;
-        edibles(temp, 50);
-    }
-
-    //inner_right_wall form BC
-    for (int i = 0; i < 3; i++) {
-        temp = 70 - i * 8;
-        edibles(-70, temp);
-    }
-
-    //inner_right_bar BD
-    for (int i = 0; i < 7; ++i) {
-        temp = -70 + i * 7.5;
-        edibles(temp, 70);
-    }
-
-    //inner_right_wall form BCC
-    for (int i = 0; i < 3; i++) {
-        temp = 50 - i * 8;
-        edibles(-17.5, temp);
-    }
-
-    //inner_right_bar BE
-    for (int i = 0; i < 10; ++i) {
-        temp = -90 + i * 7.5;
-        edibles(temp, 90);
-    }
-
-    //inner_right_bar BF
-    for (int i = 1; i < 19; ++i) {
-        temp = 70 - i * 7.5;
-        edibles(temp, -70);
-    }
-
-    //inner_right_bar BG
-    for (int i = 1; i < 19; ++i) {
-        temp = 72 - i * 7.5;
-        edibles(temp, -50);
-    }
-
-    //inner_right_bar BH
-    for (int i = 1; i < 19; ++i) {
-        if (i != 9 && i != 10) {
-            temp = 72 - i * 7.5;
-            edibles(temp, -30);
-        }
-    }
-
-    //inner_right_bar BI
-    for (int i = 1; i < 19; ++i) {
-        if (i != 9 && i != 10) {
-            temp = 72 - i * 7.5;
-            edibles(temp, 25);
-        }
-    }
-
-    //inner_right_wall form AC
-    for (int i = 0; i < 10; i++) {
-        temp = 90 - i * 7.5;
-        edibles(0, temp);
     }
 }
 
 void init_gamemap_level_one() {
     for (int i = 0; i < mat_range; i++) {
+        //cube_A
         for (int j = 0; j <= 4; j++) {
             game_map[j][i] = 'w';
         }
+        //cube_B
         for (int j = 195; j <= 199; j++) {
             game_map[j][i] = 'w';
         }
+        //cube_D
+        if (i <= 4) {
+            for (int j = 105; j <= 199; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+        //cube_C
+        if (i >= 195) {
+            for (int j = 105; j <= 199; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+        //cube_F
+        if (i <= 4) {
+            for (int j = 0; j <= 95; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+        //cube_E
+        if (i >= 195) {
+            for (int j = 0; j <= 95; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
         // cube_J
         if (i <= 84 && i >= 14) {
             for (int j = 14; j <= 24; j++) {
@@ -675,19 +682,19 @@ void init_gamemap_level_one() {
         }
         // cube_L
         if (i <= 84 && i >= 34) {
-            for (int j = 39; j <= 49; j++) {
+            for (int j = 39; j <= 48; j++) {
                 game_map[j][i] = 'w';
             }
         }
         //cube_K
         if (i <= 174 && i >= 134) {
-            for (int j = 39; j <= 49; j++) {
+            for (int j = 39; j <= 48; j++) {
                 game_map[j][i] = 'w';
             }
         }
         // cube_N
         if (i <= 64 && i >= 14) {
-            for (int j = 54; j <= 64; j++) {
+            for (int j = 55; j <= 64; j++) {
                 game_map[j][i] = 'w';
             }
         }
@@ -704,14 +711,93 @@ void init_gamemap_level_one() {
                 game_map[j][i] = 'w';
             }
         }
+        // cube_Q
+        if (i <= 94 && i >= 84) {
+            for (int j = 0; j <= 64; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+        // cube_R
+        if (i <= 114 && i >= 104) {
+            for (int j = 0; j <= 64; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
         //cube_O
-        if (i <= 174 && i >= 104) {
+        if (i <= 174 && i >= 114) {
             for (int j = 175; j <= 185; j++) {
                 game_map[j][i] = 'w';
             }
         }
 
+        //cube_S
+        if (i <= 164 && i >= 34) {
+            for (int j = 155; j <= 165; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
 
+        //cube_T
+        if (i <= 164 && i >= 34) {
+            for (int j = 135; j <= 145; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
+        //cube_U
+        if (i <= 104 && i >= 94) {
+            for (int j = 125; j <= 135; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
+        //cube_v
+        if (i <= 149 && i >= 44) {
+            for (int j = 115; j <= 125; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
+        //cube_X
+        if (i <= 49 && i >= 39) {
+            for (int j = 75; j <= 115; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
+        //cube_W
+        if (i <= 164 && i >= 144) {
+            for (int j = 75; j <= 115; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
+        //cube_G
+        if (i <= 24 && i >= 14) {
+            for (int j = 14; j <= 179; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+        //cube_H
+        if (i <= 184 && i >= 174) {
+            for (int j = 14; j <= 179; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+
+        //cube_Y
+        if (i <= 100 && i >= 144) {
+            for (int j = 75; j <= 84; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
+        //cube_Z
+        if (i <= 39 && i >= 74) {
+            for (int j = 75; j <= 84; j++) {
+                game_map[j][i] = 'w';
+            }
+        }
     }
 }
 
@@ -758,7 +844,7 @@ void display() {
     //glScalef(5, 5, 5);
     gameMap();
     pacman();
-    generateEdibles();
+
     ghosts(gx_1, gy_1, 1);
     ghosts(gx_2, gy_2, 2);
     ghosts(gx_3, gy_3, 3);
@@ -771,6 +857,8 @@ void display() {
 
 void animate() {
     pacmanMove();
+    //printf("Point = %d \n",points);
+    generateEdibles();
     //codes for any changes in Models, Camera
 
     //cameraAngle += cameraAngleDelta;	// camera will rotate at 0.002 radians per frame.
