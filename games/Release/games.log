@@ -1,0 +1,55 @@
+﻿Build started 12-Sep-17 1:31:29 PM.
+     1>Project "F:\My Projects\games\games\games.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>Source.cpp(393): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(394): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(399): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(400): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(403): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(413): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(414): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(419): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(420): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(423): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(433): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(434): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(439): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(440): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(443): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(453): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(454): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(459): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(460): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(463): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(514): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(515): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(520): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(521): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(524): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(534): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(535): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(540): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(541): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(544): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(554): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(555): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(560): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(561): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(564): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(574): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(575): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(580): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(581): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>Source.cpp(584): warning C4553: '==' : operator has no effect; did you intend '='?
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\My Projects\games\Release\games.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\My Projects\games\Release\games.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\My Projects\games\Release\games.lib" /MACHINE:X86 /SAFESEH Release\Source.obj
+         Generating code
+         Finished generating code
+         games.vcxproj -> F:\My Projects\games\Release\games.exe
+     1>Done Building Project "F:\My Projects\games\games\games.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.63

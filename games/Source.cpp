@@ -385,6 +385,7 @@ bool pacmanMove() {
     printf("%d\t%d\n", temp_x, temp_y);
     //printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
     //printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
+	printf("Food Check = %c",(game_map[temp_y][temp_x] == 'f'));
     printf("%d\n", side);
     switch (side) {
         case 0:
@@ -498,8 +499,8 @@ void ghosts(int x, int y, int color) {
 }
 
 void ghostMove_1() {
-	//need to update x & y coord methods.
-	int temp_x = x_coord();
+    //need to update x & y coord methods.
+    int temp_x = x_coord();
     int temp_y = y_coord();
 
     /*printf("%f\t%f\n", px, py);
@@ -615,6 +616,7 @@ void edibles(int x, int y) {
     glScalef(.02, .02, .02);
     glutSolidSphere(100, 100, 100);
     glPopMatrix();
+	printf("edibles: %d\t%d\n",x,y);
 }
 
 bool eat(float x, float y) {
@@ -625,8 +627,8 @@ bool eat(float x, float y) {
 void generateEdibles() {
     for (int i = 0; i < 200; ++i) {
         for (int j = 0; j < 200; ++j) {
-            if (game_map[i][j] == 'f') {
-                edibles(100 - j, -100 + i);
+            if (game_map[j][i] == 'f') {
+                edibles(100 - j, 100 - i);
             }
         }
 
@@ -798,6 +800,14 @@ void init_gamemap_level_one() {
                 game_map[j][i] = 'w';
             }
         }
+        //*******************************************
+        // Foods
+        if (i == 191) {
+            for (int j = 9; j < 190; j = j + 5) {
+                game_map[j][i] = 'f';
+                edibles(100 - i, -100 + j);
+            }
+        }
     }
 }
 
@@ -857,7 +867,7 @@ void display() {
 
 void animate() {
     pacmanMove();
-    //printf("Point = %d \n",points);
+    printf("Point = %d \n", points);
     generateEdibles();
     //codes for any changes in Models, Camera
 
@@ -882,6 +892,7 @@ void init() {
     halt_game = false;
     points = 0;
     init_gamemap_level_one();
+    generateEdibles();
     //powers
     pw_slow = 0;
     //pacman

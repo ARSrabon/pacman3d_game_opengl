@@ -1,48 +1,48 @@
-﻿Build started 11-Sep-17 1:12:51 PM.
+﻿Build started 18-Sep-17 2:18:02 PM.
      1>Project "F:\My Projects\games\games\games.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-     1>f:\my projects\games\games\source.cpp(393): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(394): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(399): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(395): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(400): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(403): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(413): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(401): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(404): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(414): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(419): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(415): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(420): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(423): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(433): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(421): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(424): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(434): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(439): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(435): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(440): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(443): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(453): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(441): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(444): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(454): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(459): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(455): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(460): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(463): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(514): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(461): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(464): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(515): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(520): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(516): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(521): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(524): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(534): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(522): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(525): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(535): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(540): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(536): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(541): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(544): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(554): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(542): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(545): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(555): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(560): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(556): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(561): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(564): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(574): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(562): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(565): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(575): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(580): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(576): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(581): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(584): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(582): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>f:\my projects\games\games\source.cpp(585): warning C4553: '==' : operator has no effect; did you intend '='?
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\My Projects\games\Debug\games.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\My Projects\games\Debug\games.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\My Projects\games\Debug\games.lib" /MACHINE:X86 Debug\Source.obj
          games.vcxproj -> F:\My Projects\games\Debug\games.exe
@@ -50,4 +50,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.28
+Time Elapsed 00:00:01.12
