@@ -1,28 +1,8 @@
-﻿Build started 18-Sep-17 2:18:02 PM.
+﻿Build started 23-Sep-17 12:18:50 AM.
      1>Project "F:\My Projects\games\games\games.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-     1>f:\my projects\games\games\source.cpp(394): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(395): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(400): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(401): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(404): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(414): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(415): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(420): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(421): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(424): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(434): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(435): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(440): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(441): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(444): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(454): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(455): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(460): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(461): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\my projects\games\games\source.cpp(464): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(515): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(516): warning C4553: '==' : operator has no effect; did you intend '='?
      1>f:\my projects\games\games\source.cpp(521): warning C4553: '==' : operator has no effect; did you intend '='?
@@ -50,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.12
+Time Elapsed 00:00:01.09

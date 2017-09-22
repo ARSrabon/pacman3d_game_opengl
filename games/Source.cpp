@@ -386,22 +386,22 @@ bool pacmanMove() {
     //printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
     //printf("%d\n", (game_map[temp_x][temp_y] == 'w'));
 	printf("Food Check = %c",(game_map[temp_y][temp_x] == 'f'));
-    printf("%d\n", side);
+    //printf("%d\n", side);
     switch (side) {
         case 0:
             if (!(game_map[temp_y - 5][temp_x] == 'w')) {
                 py++;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[y_coord()][temp_x] == 'p';
-            } else if ((game_map[temp_y][temp_x] == 'f')) {
+                game_map[temp_y][temp_x] = 'O';
+                game_map[y_coord()][temp_x] = 'p';
+            } else if ((game_map[temp_y][temp_x] = 'f')) {
                 points++;
                 printf("%d", points);
                 py++;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[y_coord()][temp_x] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[y_coord()][temp_x] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
                        (game_map[temp_y][temp_x] == 'c')) {
-                game_map[temp_y][temp_x] == 'X';
+                game_map[temp_y][temp_x] = 'X';
                 halt_game = true;
             } else {
                 side = 4;
@@ -411,17 +411,17 @@ bool pacmanMove() {
         case 1:
             if (!(game_map[temp_y + 5][temp_x] == 'w')) {
                 py--;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[y_coord()][temp_x] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[y_coord()][temp_x] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'f')) {
                 points++;
                 printf("%d", points);
                 py--;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[y_coord()][temp_x] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[y_coord()][temp_x] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
                        (game_map[temp_y][temp_x] == 'c')) {
-                game_map[temp_y][temp_x] == 'X';
+                game_map[temp_y][temp_x] = 'X';
                 halt_game = true;
             } else {
                 side = 4;
@@ -431,17 +431,17 @@ bool pacmanMove() {
         case 2:
             if (!(game_map[temp_y][temp_x + 5] == 'w')) {
                 px++;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[temp_y][x_coord()] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[temp_y][x_coord()] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'f')) {
                 points++;
                 printf("%d", points);
                 px++;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[temp_y][x_coord()] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[temp_y][x_coord()] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
                        (game_map[temp_y][temp_x] == 'c')) {
-                game_map[temp_y][temp_x] == 'X';
+                game_map[temp_y][temp_x] = 'X';
                 halt_game = true;
             } else {
                 side = 4;
@@ -451,17 +451,17 @@ bool pacmanMove() {
         case 3:
             if (!(game_map[temp_y][temp_x - 5] == 'w')) {
                 px--;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[temp_y][x_coord()] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[temp_y][x_coord()] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'f')) {
                 points++;
                 printf("%d", points);
                 px--;
-                game_map[temp_y][temp_x] == 'O';
-                game_map[temp_y][x_coord()] == 'p';
+                game_map[temp_y][temp_x] = 'O';
+                game_map[temp_y][x_coord()] = 'p';
             } else if ((game_map[temp_y][temp_x] == 'i') || (game_map[temp_y][temp_x] == 'b') ||
                        (game_map[temp_y][temp_x] == 'c')) {
-                game_map[temp_y][temp_x] == 'X';
+                game_map[temp_y][temp_x] = 'X';
                 halt_game = true;
             } else {
                 side = 4;
@@ -868,7 +868,7 @@ void display() {
 void animate() {
     pacmanMove();
     printf("Point = %d \n", points);
-    generateEdibles();
+   // generateEdibles();
     //codes for any changes in Models, Camera
 
     //cameraAngle += cameraAngleDelta;	// camera will rotate at 0.002 radians per frame.
